@@ -1,24 +1,20 @@
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import React from "react";
 
 export default function WelcomeScreen() {
   return (
-    <View style={{ flex: 1 }}>
+    <View
+      style={{
+        flex: 0.27,
+        backgroundColor: "#FFE382",
+      }}
+    >
       <Text
         style={{
-          padding: 40,
-          fontSize: 30,
-          color: "#EDEFEE",
-          textAlign: "center",
-        }}>
-        Welcome to Little Lemon
-      </Text>
-      <Text
-        style={{
-          padding: 20,
+          padding: 0,
           marginVertical: 8,
-          fontSize: 24,
-          color: "white",
+          fontSize: 20,
+          color: "black",
           textAlign: "center",
         }}
       >

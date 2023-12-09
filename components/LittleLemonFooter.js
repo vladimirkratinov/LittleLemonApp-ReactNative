@@ -5,12 +5,12 @@ export default function LittleLemonFooter() {
   return (
     <View
       style={{
-        backgroundColor: "#F4CE14",
+        backgroundColor: "#FFAD84",
       }}
     >
       <Text
         style={{
-          fontSize: 18,
+          fontSize: 12,
           color: "black",
           textAlign: "center",
         }}
