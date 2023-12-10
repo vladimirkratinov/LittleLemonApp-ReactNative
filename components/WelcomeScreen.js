@@ -3,8 +3,8 @@ import React from "react";
 
 export default function WelcomeScreen() {
   return (
-    <View style={welcomeStyles.container}>
-      <Text style={welcomeStyles.text}>
+    <View style={styles.container}>
+      <Text style={styles.text}>
         Little Lemon is a charming neighborhood bistro that serves simple food
         and classic cocktails in a lively but casual environment. We would love
         to hear more about your experience with us!
@@ -13,7 +13,7 @@ export default function WelcomeScreen() {
   );
 }
 
-const welcomeStyles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 0.27,
     backgroundColor: "#FFE382",

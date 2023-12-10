@@ -1,5 +1,5 @@
-import React from "react";
 import { ScrollView, Text, StyleSheet } from "react-native";
+import React from "react";
 import emojis from './emojis.js';
 
 const getRandomEmoji = () => emojis[Math.floor(Math.random() * emojis.length)];
@@ -11,9 +11,9 @@ const MockData = Array.from({ length: 20 }, (_, index) => ({
 
 const ScrollList = () => {
   return (
-    <ScrollView style={scrollListStyles.container}>
+    <ScrollView style={styles.container}>
       {MockData.map((item) => (
-        <Text key={item.id} style={scrollListStyles.item}>
+        <Text key={item.id} style={styles.item}>
           {item.text}
         </Text>
       ))}
@@ -21,7 +21,7 @@ const ScrollList = () => {
   );
 };
 
-const scrollListStyles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 0,
