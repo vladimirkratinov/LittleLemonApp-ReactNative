@@ -4,13 +4,15 @@ import LittleLemonHeader from "./components/LittleLemonHeader";
 import LittleLemonFooter from "./components/LittleLemonFooter";
 import WelcomeScreen from "./components/WelcomeScreen";
 import ScrollList from "./components/ScrollList";
+import MenuItems from "./components/MenuItems";
 
 export default function App() {
   return (
     <View style={styles.container}>
       <LittleLemonHeader />
       <WelcomeScreen />
-      <ScrollList />
+      {/* <ScrollList /> */}
+      <MenuItems />
       <LittleLemonFooter />
     </View>
   );
