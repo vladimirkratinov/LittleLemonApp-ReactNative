@@ -5,9 +5,18 @@ const ImageComponent = ({ source, style }) => {
   return <Image source={source} style={style} />;
 };
 
+const Separator =() => <View style={menuStyles.separator} />
+
+const Header = () => <Text style={menuStyles.headerText}>
+✨Use code LEMON15 for an exclusive 15% off.</Text>;
+
+const Footer = () => <Text style={menuStyles.footerText}>
+  All rights reserved by Little Lemon, 2024©</Text>;
+
 const Item = ({ name, price, image, description }) => (
   // 2 styles: one for item container, second one for a underline
-  <View style={[menuStyles.innerContainer, menuStyles.itemContainer]}>
+  // can use array of styles: [menuStyles.innerContainer, menuStyles.itemContainer]
+  <View style={menuStyles.innerContainer}>
     <ImageComponent source={{ uri: image }} style={menuStyles.itemImage} />
     <View style={menuStyles.textContainer}>
       <Text style={menuStyles.itemText}>{name}</Text>
@@ -25,11 +34,13 @@ const MenuItems = () => {
 
   return (
     <View style={menuStyles.container}>
-      {/* <Text style={menuStyles.headerText}>Menu</Text> */}
       <FlatList
         data={menuItemsToDisplay}
         keyExtractor={(item) => item.id}
         renderItem={renderItem}
+        ItemSeparatorComponent={Separator}
+        ListHeaderComponent={Header}
+        ListFooterComponent={Footer}
       />
     </View>
   );
@@ -42,9 +53,9 @@ const menuStyles = StyleSheet.create({
   },
   headerText: {
     color: "black", // Change header text color
-    fontSize: 12,
-    fontWeight: "bold", // Add bold font weight
+    fontSize: 10,
     textAlign: "center",
+    fontStyle: "italic"
   },
   innerContainer: {
     paddingHorizontal: 20,
@@ -54,7 +65,12 @@ const menuStyles = StyleSheet.create({
     justifyContent: "space-between", // Align items horizontally
     alignItems: "center", // Align items vertically
   },
-  itemContainer: {
+  // itemContainer: {
+  //   borderBottomWidth: 1,
+  //   borderBottomColor: "#CCCCCC",
+  //   marginBottom: 5,
+  // },
+  separator: {
     borderBottomWidth: 1,
     borderBottomColor: "#CCCCCC", // Adjust the border color
     marginBottom: 5, // Add margin at the bottom of each item container
@@ -62,6 +78,20 @@ const menuStyles = StyleSheet.create({
   textContainer: {
     flex: 1,
     marginLeft: 10, // Add margin to the text container
+  },
+  headerText: {
+    marginTop: 10,
+    marginBottom: 10,
+    fontSize: 12,
+    color: "#666666",
+    textAlign: "center",
+    // fontStyle: 'italic',
+  },
+  footerText: {
+    marginTop: 10,
+    fontSize: 12,
+    color: "#999999",
+    textAlign: "center",
   },
   itemImage: {
     width: 120, // Increase the image width

@@ -13,7 +13,7 @@ export default function App() {
       <WelcomeScreen />
       {/* <ScrollList /> */}
       <MenuItems />
-      <LittleLemonFooter />
+      {/* <LittleLemonFooter /> */}
     </View>
   );
 }

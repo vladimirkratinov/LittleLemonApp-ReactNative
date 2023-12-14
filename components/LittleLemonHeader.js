@@ -4,23 +4,24 @@ import React from "react";
 export default function LittleLemonHeader() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Little Lemon</Text>
+      <Text style={styles.text}>🍋 Little Lemon</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0.18,
+    flex: 0.15,
     backgroundColor: "#F2F2F2",
   },
   text: {
     padding: 0,
     marginTop: 65,
-    fontSize: 30,
+    marginLeft: 10,
+    fontSize: 25,
     color: "black",
     fontWeight: "bold",
     justifyContent: "center",
-    textAlign: "center",
+    textAlign: "left",
   }
 });
