@@ -5,13 +5,19 @@ const ImageComponent = ({ source, style }) => {
   return <Image source={source} style={style} />;
 };
 
-const Separator =() => <View style={menuStyles.separator} />
+const Separator = () => <View style={menuStyles.separator} />;
 
-const Header = () => <Text style={menuStyles.headerText}>
-✨Use code LEMON15 for an exclusive 15% off.</Text>;
+const Header = () => (
+  <Text style={menuStyles.headerText}>
+    ✨Use code LEMON15 for an exclusive 15% off.
+  </Text>
+);
 
-const Footer = () => <Text style={menuStyles.footerText}>
-  All rights reserved by Little Lemon, 2024©</Text>;
+const Footer = () => (
+  <Text style={menuStyles.footerText}>
+    All rights reserved by Little Lemon, 2024©
+  </Text>
+);
 
 const Item = ({ name, price, image, description }) => (
   // 2 styles: one for item container, second one for a underline
@@ -22,14 +28,18 @@ const Item = ({ name, price, image, description }) => (
       <Text style={menuStyles.itemText}>{name}</Text>
       <Text style={menuStyles.itemDescription}>{description}</Text>
       <Text style={menuStyles.itemPrice}>${price}</Text>
-      
     </View>
   </View>
 );
 
 const MenuItems = () => {
   const renderItem = ({ item }) => (
-    <Item name={item.name} price={item.price} description={item.description} image={item.image} />
+    <Item
+      name={item.name}
+      price={item.price}
+      description={item.description}
+      image={item.image}
+    />
   );
 
   return (
@@ -55,7 +65,7 @@ const menuStyles = StyleSheet.create({
     color: "black", // Change header text color
     fontSize: 10,
     textAlign: "center",
-    fontStyle: "italic"
+    fontStyle: "italic",
   },
   innerContainer: {
     paddingHorizontal: 20,
@@ -115,6 +125,5 @@ const menuStyles = StyleSheet.create({
     marginTop: 5, // Add margin at the top of the description text
   },
 });
-
 
 export default MenuItems;
