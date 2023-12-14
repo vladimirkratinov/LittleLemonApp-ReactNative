@@ -15,13 +15,13 @@ export default function WelcomeScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0.24,
+    flex: 0.10,
     backgroundColor: "#FFE382",
   },
   text: {
     padding: 0,
     marginVertical: 8,
-    fontSize: 20,
+    fontSize: 12,
     color: "black",
     textAlign: "center",
   },
