@@ -1,71 +1,80 @@
-import { View, Text, StyleSheet, FlatList } from "react-native";
+import { View, Text, StyleSheet, FlatList, Image } from "react-native";
+import menuItemsToDisplay from "../data";
 
-const menuItemsToDisplay = [
-  { name: "Margherita Pizza", id: "1" },
-  { name: "Chicken Alfredo Pasta", id: "2" },
-  { name: "Sushi Platter", id: "3" },
-  { name: "Cheeseburger", id: "4" },
-  { name: "Caesar Salad", id: "5" },
-  { name: "Pad Thai", id: "6" },
-  { name: "Mushroom Risotto", id: "7" },
-  { name: "Tandoori Chicken", id: "8" },
-  { name: "Pho Soup", id: "9" },
-  { name: "Grilled Salmon", id: "10" },
-  { name: "Beef Tacos", id: "11" },
-  { name: "Vegetarian Burrito", id: "12" },
-  { name: "Shrimp Scampi", id: "13" },
-  { name: "Chicken Shawarma", id: "14" },
-  { name: "Caprese Salad", id: "15" },
-  { name: "Spaghetti Bolognese", id: "16" },
-  { name: "Hawaiian Poke Bowl", id: "17" },
-  { name: "Chocolate Lava Cake", id: "18" },
-  { name: "Chicken Satay Skewers", id: "19" },
-  { name: "Greek Gyro Wrap", id: "20" },
-];
+const ImageComponent = ({ source, style }) => {
+  return <Image source={source} style={style} />;
+};
 
-const Item = ({ name }) => (
-    <View style={[menuStyles.innerContainer, menuStyles.itemContainer]}>
-    <Text style={menuStyles.itemText}>{name}</Text>
+const Item = ({ name, price, image }) => (
+  // 2 styles: one for item container, second one for a underline
+  <View style={[menuStyles.innerContainer, menuStyles.itemContainer]}>
+    <ImageComponent source={{ uri: image }} style={menuStyles.itemImage} />
+    <View style={menuStyles.textContainer}>
+      <Text style={menuStyles.itemText}>{name}</Text>
+      <Text style={menuStyles.itemPrice}>{price}</Text>
+    </View>
   </View>
 );
 
 const MenuItems = () => {
-  const renderItem = ({ item }) => <Item name={item.name} />;
+  const renderItem = ({ item }) => (
+    <Item name={item.name} price={item.price} image={item.image} />
+  );
 
   return (
     <View style={menuStyles.container}>
       <Text style={menuStyles.headerText}>View Menu</Text>
       <FlatList
         data={menuItemsToDisplay}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => item.id.toString()}
         renderItem={renderItem}
-      ></FlatList>
+      />
     </View>
   );
 };
 
 const menuStyles = StyleSheet.create({
   container: {
-    flex: 0.75,
+    flex: 1,
+    backgroundColor: "#F2F2F2", // Adjust the background color as needed
   },
   innerContainer: {
     paddingHorizontal: 20,
-    paddingVertical: 5,
+    paddingVertical: 10,
     backgroundColor: "white",
+    flexDirection: "row",
+    justifyContent: "space-between", // Align items horizontally
+    alignItems: "center", // Align items vertically
+  },
+  itemImage: {
+    width: 120, // Increase the image width
+    height: 120, // Increase the image height
+    marginRight: 5,
+    borderRadius: 5, // Add border radius for rounded corners
+  },
+  textContainer: {
+    flex: 1,
+    marginLeft: 10, // Add margin to the text container
   },
   headerText: {
-    color: "white",
-    fontSize: 40,
-    flexWrap: "wrap",
+    color: "black", // Change header text color
+    fontSize: 24,
+    fontWeight: "bold", // Add bold font weight
     textAlign: "center",
   },
   itemContainer: {
-    borderBottomWidth: 2,
-    borderBottomColor: "grey",
+    borderBottomWidth: 1,
+    borderBottomColor: "#CCCCCC", // Adjust the border color
+    marginBottom: 10, // Add margin at the bottom of each item container
   },
   itemText: {
     color: "black",
-    fontSize: 24,
+    fontSize: 18, // Decrease the font size for item text
+  },
+  itemPrice: {
+    color: "green", // Change item price color
+    fontSize: 16, // Decrease the font size for item price
+    textAlign: "right",
   },
 });
 

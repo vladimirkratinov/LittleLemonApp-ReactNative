@@ -15,7 +15,7 @@ export default function WelcomeScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0.18,
+    flex: 0.24,
     backgroundColor: "#FFE382",
   },
   text: {
