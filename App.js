@@ -9,13 +9,14 @@ import WelcomeScreen from "./components/WelcomeScreen";
 import SectionListMenu from "./components/SectionListMenu";
 import FlatListMenu from "./components/FlatListMenu";
 import ScrollListMenu from "./components/ScrollListMenu";
-import menuStyles from "./menuStyles";
+import stylesMenu from "./styles/stylesMenu";
+import FeedbackForm from "./components/FeedbackForm";
 
 const Tab = createBottomTabNavigator();
 
 const App = () => {
   return (
-    <SafeAreaView style={menuStyles.container}>
+    <SafeAreaView style={stylesMenu.container}>
       <NavigationContainer>
         <LittleLemonHeader />
         <Tab.Navigator
@@ -29,8 +30,8 @@ const App = () => {
                 iconName = focused ? "ios-list" : "ios-list-outline";
               } else if (route.name === "FlatList") {
                 iconName = focused ? "ios-albums" : "ios-albums-outline";
-              } else if (route.name === "ScrollList") {
-                iconName = focused ? "ios-menu" : "ios-menu-outline";
+              } else if (route.name === "Feedback") {
+                iconName = focused ? "information-circle" : "information-circle-outline";
               }
 
               return <Ionicons name={iconName} size={size} color={color} />;
@@ -53,8 +54,8 @@ const App = () => {
             options={{ headerShown: false }}
           />
           <Tab.Screen
-            name="ScrollList"
-            component={ScrollListMenu}
+            name="Feedback"
+            component={FeedbackForm}
             options={{ headerShown: false }}
           />
         </Tab.Navigator>

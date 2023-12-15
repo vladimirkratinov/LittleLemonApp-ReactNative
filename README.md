@@ -58,11 +58,11 @@ Little Lemon Restaurant App is a mobile application developed with React Native,
 **ver. 0.2 (12/14/2023)**
 
 <div align="left">
-   <img src="assets/example3.png" alt="Example3 Image" width="400" height="100%">
-   <img src="assets/example4.png" alt="Example4 Image" width="400" height="100%">
+   <img src="assets/exammple/example3.png" alt="Example3 Image" width="400" height="100%">
+   <img src="assets/exammple/example4.png" alt="Example4 Image" width="400" height="100%">
    <hr />
-   <img src="assets/example5.png" alt="Example5 Image" width="400" height="100%">
-   <img src="assets/example6.png" alt="Example6 Image" width="400" height="100%">
+   <img src="assets/exammple/example5.png" alt="Example5 Image" width="400" height="100%">
+   <img src="assets/exammple/example6.png" alt="Example6 Image" width="400" height="100%">
 </div>
 
 ## License

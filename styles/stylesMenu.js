@@ -1,6 +1,6 @@
 import { StyleSheet, StatusBar } from "react-native";
 
-const menuStyles = StyleSheet.create({
+const stylesMenu = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: StatusBar.currentHeight,
@@ -89,4 +89,4 @@ const menuStyles = StyleSheet.create({
   },
 });
 
-export default menuStyles;
+export default stylesMenu;
