@@ -12,6 +12,12 @@ const Item = ({ name, price }) => (
 
 const Separator = () => <View style={menuStyles.separatorSectionStyle} />;
 
+const Header = () => (
+  <Text style={menuStyles.headerText}>
+    ✨Use code LEMON15 for an exclusive 15% off.
+  </Text>
+);
+
 const Footer = () => (
   <Text style={menuStyles.footerText}>
     All Rights Reserved by Little Lemon 2024 ©
@@ -22,16 +28,19 @@ const SectionListMenu = () => {
   const renderItem = ({ item }) => <Item name={item.name} price={item.price} />;
 
   const renderSectionHeader = ({ section: { title } }) => (
-    <Text style={menuStyles.sectionHeader}>{title}</Text>
+    <View style={menuStyles.headerStyle}>
+      <Text style={menuStyles.sectionHeader}>{title}</Text>
+    </View>
   );
 
   return (
-    <View style={menuStyles.container}>
+    <View style={menuStyles.containerList}>
       <SectionList
         keyExtractor={(item, index) => item + index}
         sections={menuItemsToDisplay2}
         renderItem={renderItem}
         renderSectionHeader={renderSectionHeader}
+        ListHeaderComponent={Header}
         ListFooterComponent={Footer}
         ItemSeparatorComponent={Separator}
       ></SectionList>

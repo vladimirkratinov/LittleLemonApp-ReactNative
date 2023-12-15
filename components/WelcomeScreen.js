@@ -70,13 +70,14 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 20,
     fontWeight: "bold",
-    marginTop: 20,
+    marginTop: 10,
   },
   description: {
-    fontSize: 16,
+    fontSize: 14,
     textAlign: "center",
     marginHorizontal: 20,
-    marginBottom: 20,
+    marginTop: 10,
+    marginBottom: 10,
   },
   image: {
     width: 300,

@@ -16,7 +16,7 @@ const Header = () => (
 
 const Footer = () => (
   <Text style={menuStyles.footerText}>
-    All rights reserved by Little Lemon, 2024 ©
+    All Rights Reserved by Little Lemon 2024 ©
   </Text>
 );
 
@@ -44,7 +44,7 @@ const FlatListMenu = () => {
   );
 
   return (
-    <View style={menuStyles.container}>
+    <View style={menuStyles.containerList}>
       <FlatList
         data={menuItemsToDisplay1}
         keyExtractor={(item) => item.id}

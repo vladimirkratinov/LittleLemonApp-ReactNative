@@ -1,9 +1,18 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, StatusBar } from "react-native";
 
 const menuStyles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F2F2F2", // Adjust the background color as needed
+    paddingTop: StatusBar.currentHeight,
+    marginHorizontal: 0,
+    backgroundColor: "#F2F2F2"
+    // backgroundColor: "blue"
+  },
+  containerList: {
+    flex: 1,
+    marginHorizontal: 0,
+    backgroundColor: "#F2F2F2"
+    // backgroundColor: "blue"
   },
   headerText: {
     color: "black", // Change header text color
@@ -32,6 +41,9 @@ const menuStyles = StyleSheet.create({
   textContainer: {
     flex: 1,
     marginLeft: 10, // Add margin to the text container
+  },
+  headerStyle: {
+    backgroundColor: '#F4CE14',
   },
   sectionHeader: {
     backgroundColor: "#fbdabb",
