@@ -1,4 +1,4 @@
-const menuItemsToDisplay = [
+const menuItemsToDisplay1 = [
   {
     name: "Margherita Pizza",
     id: "1",
@@ -163,4 +163,4 @@ const menuItemsToDisplay = [
   },
 ];
 
-export default menuItemsToDisplay;
+export default menuItemsToDisplay1;
