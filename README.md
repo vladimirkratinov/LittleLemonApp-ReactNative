@@ -77,7 +77,7 @@ Little Lemon Restaurant App is a mobile application developed with React Native,
 - initial commit, ScrollView
 
 <div align="center">
-   <img src="assets/example/example1.png" alt="Example1" width="600" height="100%">
+   <img src="assets/example/example1.png" alt="Example1" width="800" height="100%">
 </div>
 
 ## License
