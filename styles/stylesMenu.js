@@ -5,7 +5,8 @@ const stylesMenu = StyleSheet.create({
     flex: 1,
     paddingTop: StatusBar.currentHeight,
     marginHorizontal: 0,
-    backgroundColor: "#F2F2F2"
+    // backgroundColor: "#F2F2F2",
+    backgroundColor: "white",
     // backgroundColor: "blue"
   },
   containerList: {
@@ -62,6 +63,7 @@ const stylesMenu = StyleSheet.create({
   },
   footerText: {
     marginTop: 10,
+    marginBottom: 10,
     fontSize: 12,
     color: "#999999",
     textAlign: "center",

@@ -6,6 +6,7 @@ const stylesFeedback = StyleSheet.create({
     // paddingTop: StatusBar.currentHeight,
     marginHorizontal: 0,
     backgroundColor: "#495E57",
+    // backgroundColor: "#FFFFFF"
   },
   input: {
     height: 40,

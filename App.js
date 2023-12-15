@@ -8,7 +8,6 @@ import LittleLemonHeader from "./components/LittleLemonHeader";
 import WelcomeScreen from "./components/WelcomeScreen";
 import SectionListMenu from "./components/SectionListMenu";
 import FlatListMenu from "./components/FlatListMenu";
-import ScrollListMenu from "./components/ScrollListMenu";
 import stylesMenu from "./styles/stylesMenu";
 import FeedbackForm from "./components/FeedbackForm";
 
