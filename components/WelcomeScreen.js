@@ -1,51 +1,32 @@
-// WelcomeScreen.js
-
-import React from "react";
 import {
   View,
   Text,
   Image,
   StyleSheet,
-  TouchableOpacity,
   ScrollView,
 } from "react-native";
-import MapView, { Marker, Callout } from "react-native-maps";
+import React from "react";
 
 const WelcomeScreen = () => {
-  const mapRef = React.useRef(null);
-
-  const centerToRestaurant = () => {
-    if (mapRef.current) {
-      mapRef.current.animateToRegion({
-        latitude: 41.8781,
-        longitude: -87.6298,
-        latitudeDelta: 0.0922,
-        longitudeDelta: 0.0421,
-      });
-    }
-  };
 
   return (
     <ScrollView>
-      <View style={styles.container}>
-        <Text style={styles.title}>Little Lemon Restaurant</Text>
-
+<View style={styles.container}>
         {/* Restaurant Introduction */}
-        <Image
-          source={require("../assets/images/restaurant.jpg")}
-          style={styles.image}
-        />
         <Text style={styles.sectionTitle}>Welcome to Little Lemon!</Text>
         <Text style={styles.description}>
           Enjoy our delightful menu with fresh and tasty dishes. We provide a
           cozy and friendly atmosphere for a perfect dining experience.
         </Text>
-
-        {/* About Us */}
         <Image
-          source={require("../assets/images/about_us.jpg")}
+          source={require("../assets/images/restaurant1.jpg")}
           style={styles.image}
         />
+        <Image
+          source={require("../assets/images/restaurant2.jpg")}
+          style={styles.image}
+        />
+        {/* About Us */}
         <Text style={styles.sectionTitle}>About Us</Text>
         <Text style={styles.description}>
           Little Lemon is a family-owned restaurant committed to serving
@@ -64,34 +45,8 @@ const WelcomeScreen = () => {
         />
 
         <Text style={styles.sectionTitle}>Our Location 📍</Text>
-
         {/* Location Map */}
-        <MapView
-          ref={mapRef}
-          style={styles.map}
-          initialRegion={{
-            latitude: 41.8781,
-            longitude: -87.6298,
-            latitudeDelta: 0.0922,
-            longitudeDelta: 0.0421,
-          }}
-        >
-          <Marker
-            coordinate={{ latitude: 41.8781, longitude: -87.6298 }}
-            title="Little Lemon Restaurant"
-            description="Delicious Food Here!"
-          />
-          <Callout>
-            <View>
-            <TouchableOpacity
-              style={styles.pinButton}
-              onPress={centerToRestaurant}
-            >
-              <Text style={styles.pinText}>Center</Text>
-            </TouchableOpacity>
-            </View>
-          </Callout>
-        </MapView>
+
         <Text style={styles.description}>
           Visit us at the address above to experience the best culinary delights
           and a warm, welcoming atmosphere.
@@ -139,14 +94,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     padding: 5,
     borderRadius: 10,
-    marginTop: 5,
-    marginLeft: 5,
+
     borderColor: "black",
     borderWidth: 3
   },
   pinText: {
-    marginTop: 10,
-    marginLeft: 10,
     color: 'black',
     fontSize: 14,
   },
