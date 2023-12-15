@@ -52,9 +52,9 @@ const stylesFeedback = StyleSheet.create({
     alignItems: 'center',
   },
   image: {
-    width: 150,
+    width: 130,
     height: 150,
-    resizeMode: "center",
+    resizeMode: "stretch",
     borderRadius: 0,
     marginVertical: 0,
     margin: 0
