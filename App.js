@@ -1,13 +1,18 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { NavigationContainer } from "@react-navigation/native";
+// Components:
 import LittleLemonHeader from "./components/LittleLemonHeader";
 import WelcomeScreen from "./components/WelcomeScreen";
 import SectionListMenu from "./components/SectionListMenu";
 import FLatListMenu from "./components/FlatListMenu";
 import ScrollListMenu from "./components/ScrollListMenu";
+// Tab Icons:
 import { FontAwesome5, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
+// Navigation:
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { NavigationContainer } from "@react-navigation/native";
+// Tab Animation:
+import { createStackNavigator } from "react-navigation-stack";
 
 const Tab = createBottomTabNavigator();
 
@@ -24,9 +29,9 @@ export default function App() {
               if (route.name === 'Welcome') {
                 iconName = 'home';
               } else if (route.name === 'Section List') {
-                iconName = 'list';
+                iconName = 'stream';
               } else if (route.name === 'Flat List') {
-                iconName = 'grid';
+                iconName = 'tasks';
               } else if (route.name === 'Scroll List') {
                 iconName = 'scroll';
               }
@@ -40,10 +45,10 @@ export default function App() {
             inactiveTintColor: 'gray',
           }}
         >
-          <Tab.Screen name="Welcome" component={WelcomeScreen} />
-          <Tab.Screen name="Section List" component={SectionListMenu} />
-          <Tab.Screen name="Flat List" component={FLatListMenu} />
-          <Tab.Screen name="Scroll List" component={ScrollListMenu} />
+          <Tab.Screen name="Welcome" component={WelcomeScreen} options={{ headerShown: false }} />
+          <Tab.Screen name="Section List" component={SectionListMenu} options={{ headerShown: false }}/>
+          <Tab.Screen name="Flat List" component={FLatListMenu} options={{ headerShown: false }}/>
+          <Tab.Screen name="Scroll List" component={ScrollListMenu} options={{ headerShown: false }}/>
         </Tab.Navigator>
       </View>
     </NavigationContainer>
