@@ -37,7 +37,7 @@ const ScrollListMenu = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 10,
+    padding: 0,
     marginBottom: 0,
     backgroundColor: "#FFFFFF",
   },
@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     padding: 3,
     marginBottom: 0,
+    fontStyle: "italic",
   },
 });
 
