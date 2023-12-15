@@ -55,14 +55,29 @@ Little Lemon Restaurant App is a mobile application developed with React Native,
 
 ## Screenshots
 
-**ver. 0.2 (12/14/2023)**
+**ver. 0.2.1 (12/15/2023)**
+- add Feedback Screen
 
-<div align="left">
-   <img src="assets/exammple/example3.png" alt="Example3 Image" width="400" height="100%">
-   <img src="assets/exammple/example4.png" alt="Example4 Image" width="400" height="100%">
+<div align="center">
+   <img src="assets/example/example7.png" alt="Example1" width="400" height="100%">
+</div>
+
+**ver. 0.2 (12/14/2023)**
+- add WelcomeScreen, SectionList, FlatList, ScrollView
+
+<div align="center">
+   <img src="assets/example/example3.png" alt="Example3" width="400" height="100%">
+   <img src="assets/example/example4.png" alt="Example4" width="400" height="100%">
    <hr />
-   <img src="assets/exammple/example5.png" alt="Example5 Image" width="400" height="100%">
-   <img src="assets/exammple/example6.png" alt="Example6 Image" width="400" height="100%">
+   <img src="assets/example/example5.png" alt="Example5" width="400" height="100%">
+   <img src="assets/example/example6.png" alt="Example6" width="400" height="100%">
+</div>
+
+**ver. 0.1 (12/09/2023)**
+- initial commit, ScrollView
+
+<div align="center">
+   <img src="assets/example/example1.png" alt="Example1" width="600" height="100%">
 </div>
 
 ## License
