@@ -5,6 +5,10 @@ const stylesFeedback = StyleSheet.create({
     flex: 1,
     paddingTop: StatusBar.currentHeight
   },
+  inner: {
+    flex: 1,
+    justifyContent: "flex-end"
+  },
   input: {
     height: 40,
     margin: 12,
@@ -21,6 +25,7 @@ const stylesFeedback = StyleSheet.create({
     padding: 10,
     fontSize: 16,
     backgroundColor: "#F4CE14",
+    textAlignVertical: "top",
   },
   headingSection: {
     fontSize: 20,

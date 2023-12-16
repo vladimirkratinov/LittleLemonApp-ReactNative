@@ -11,19 +11,14 @@ export default function LittleLemonHeader() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0.1,
     backgroundColor: "orange",
-    justifyContent: 'center',
-    alignItems: 'left',
+    justifyContent: "center", // Center content vertically
+    alignItems: "center", // Center content horizontally
+    height: 50, // You can adjust the height as needed
   },
   text: {
-    padding: 0,
-    marginTop: 0,
-    marginLeft: 10,
     fontSize: 25,
     color: "black",
-    fontWeight: "bold",
-    justifyContent: "center",
-    textAlign: "left",
+    fontWeight: "bold"
   }
 });
