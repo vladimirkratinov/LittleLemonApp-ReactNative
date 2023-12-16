@@ -1,5 +1,6 @@
 import React from "react";
 import { SafeAreaView } from "react-native";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "react-native-vector-icons/Ionicons";
@@ -16,26 +17,27 @@ const Tab = createBottomTabNavigator();
 const App = () => {
   return (
     <SafeAreaView style={stylesMenu.container}>
+      <LittleLemonHeader />
       <NavigationContainer>
-        <LittleLemonHeader />
         <Tab.Navigator
-          screenOptions={({ route }) => ({
-            tabBarIcon: ({ focused, color, size }) => {
-              let iconName;
-
-              if (route.name === "Welcome") {
-                iconName = focused ? "ios-home" : "ios-home-outline";
-              } else if (route.name === "SectionList") {
-                iconName = focused ? "ios-list" : "ios-list-outline";
-              } else if (route.name === "FlatList") {
-                iconName = focused ? "ios-albums" : "ios-albums-outline";
-              } else if (route.name === "Feedback") {
-                iconName = focused ? "information-circle" : "information-circle-outline";
-              }
-
-              return <Ionicons name={iconName} size={size} color={color} />;
-            },
-          })}
+          screenOptions={({ route }) => {
+            const iconMapping = {
+              Welcome: "ios-home",
+              SectionList: "ios-list",
+              FlatList: "ios-albums",
+              Feedback: "information-circle",
+            };
+            const iconName = iconMapping[route.name] || "ios-home-outline";
+            return {
+              tabBarIcon: ({ focused, color, size }) => (
+                <Ionicons
+                  name={focused ? iconName : `${iconName}-outline`}
+                  size={size}
+                  color={color}
+                />
+              ),
+            };
+          }}
         >
           <Tab.Screen
             name="Welcome"

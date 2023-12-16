@@ -3,15 +3,11 @@ import { StyleSheet, StatusBar } from "react-native";
 const stylesFeedback = StyleSheet.create({
   container: {
     flex: 1,
-    // paddingTop: StatusBar.currentHeight,
-    marginHorizontal: 0,
-    backgroundColor: "#495E57",
-    // backgroundColor: "#FFFFFF"
+    paddingTop: StatusBar.currentHeight
   },
   input: {
     height: 40,
     margin: 12,
-    borderWidth: 0,
     padding: 10,
     fontSize: 16,
     borderRadius: 8,
@@ -21,44 +17,37 @@ const stylesFeedback = StyleSheet.create({
   messageInput: {
     height: 100,
     margin: 12,
-    borderWidth: 0,
     borderRadius: 8,
     padding: 10,
     fontSize: 16,
     backgroundColor: "#F4CE14",
   },
-  infoSection: {
-    fontSize: 14,
-    padding: 10,
-    marginVertical: 0,
-    color: "#EDEFEE",
-    textAlign: "center",
-    fontStyle: "italic",
-    backgroundColor: "#495E57",
-    // backgroundColor: "blue",
-  },
   headingSection: {
     fontSize: 20,
     padding: 10,
     marginVertical: 0,
-    color: "#EDEFEE",
+    color: "black",
     textAlign: "center",
     fontWeight: "bold",
-    backgroundColor: "#495E57",
     // backgroundColor: "red",
   },
+  infoSection: {
+    fontSize: 14,
+    padding: 10,
+    marginVertical: 0,
+    color: "black",
+    textAlign: "center",
+    fontStyle: "italic",
+    // backgroundColor: "blue",
+  },
+  
   imageContainer: {
-    flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
   },
   image: {
     width: 130,
-    height: 150,
-    resizeMode: "stretch",
-    borderRadius: 0,
-    marginVertical: 0,
-    margin: 0
+    height: 160,
+    resizeMode: "center"
   },
 });
 
