@@ -4,11 +4,11 @@ import stylesMenu from "../styles/stylesMenu";
 import menuItemsToDisplay2 from "../data2";
 
 const Item = ({ name, price }) => (
-    <View style={stylesMenu.innerContainer}>
-      <Text style={stylesMenu.itemText}>{name}</Text>
-      <Text style={stylesMenu.itemText}>{price}</Text>
-    </View>
-  );
+  <View style={stylesMenu.innerContainer}>
+    <Text style={stylesMenu.itemText}>{name}</Text>
+    <Text style={stylesMenu.itemText}>{price}</Text>
+  </View>
+);
 
 const Separator = () => <View style={stylesMenu.separatorSectionStyle} />;
 

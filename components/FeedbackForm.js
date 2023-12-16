@@ -30,10 +30,13 @@ export default function FeedbackForm() {
       contentContainerStyle={{ flex: 1 }}
       resetScrollToCoords={{ x: 0, y: 0 }}
       scrollEnabled={true}
-      extraScrollHeight={Platform.OS === 'ios' ? headerHeight + 105 : 0}
+      extraScrollHeight={Platform.OS === "ios" ? headerHeight + 55 : 0}
+      extraHeight={Platform.select({ android: 100 })}
+      style={{ flexGrow: 1 }}
     >
       <ScrollView
         keyboardDismissMode="on-drag"
+        keyboardShouldPersistTaps="handled"
         style={stylesFeedback.container}
       >
         <Text style={stylesFeedback.headingSection}>

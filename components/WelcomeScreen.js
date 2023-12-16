@@ -1,18 +1,11 @@
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  ScrollView,
-} from "react-native";
+import { View, Text, Image, ScrollView } from "react-native";
 import React from "react";
 import stylesWelcome from "../styles/stylesWelcome";
 
 const WelcomeScreen = () => {
-
   return (
     <ScrollView>
-<View style={stylesWelcome.container}>
+      <View style={stylesWelcome.container}>
         {/* Restaurant Introduction */}
         <Text style={stylesWelcome.sectionTitle}>Welcome to Little Lemon!</Text>
         <Text style={stylesWelcome.description}>
