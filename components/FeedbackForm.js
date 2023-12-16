@@ -6,6 +6,7 @@ import {
   TextInput,
   KeyboardAvoidingView,
   Platform,
+  Alert
 } from "react-native";
 import React, { useState } from "react";
 import stylesFeedback from "../styles/stylesFeedback";
@@ -59,12 +60,16 @@ export default function FeedbackForm() {
           value={firstName}
           placeholder="First Name"
           onChangeText={onChangeFirstName}
+          onFocus={() => Alert.alert("First Name is focused")}
+          onBlur={() => Alert.alert('First name is now blurred')}
+          clearButtonMode="always"
         />
         <TextInput
           style={stylesFeedback.input}
           value={lastName}
           placeholder="Last Name"
           onChangeText={onChangeLastName}
+          clearButtonMode="always"
         />
         <TextInput
           style={stylesFeedback.input}
@@ -72,6 +77,7 @@ export default function FeedbackForm() {
           placeholder="Email"
           keyboardType="email-address"
           onChangeText={onChangeEmail}
+          clearButtonMode="always"
         />
         <TextInput
           style={stylesFeedback.messageInput}
