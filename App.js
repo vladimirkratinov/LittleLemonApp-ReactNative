@@ -1,6 +1,7 @@
 import React from "react";
 import { SafeAreaView, Text, View, Button } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+//Navigation (new)
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -74,7 +75,10 @@ const App = () => {
     <SafeAreaView style={stylesMenu.container}>
       <LittleLemonHeader />
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="MainTabs">
+        <Stack.Navigator
+          initialRouteName="MainTabs"
+          screenOptions={{ headerStyle: { backgroundColor: "red" } }}
+        >
           <Stack.Screen
             name="MainTabs"
             component={MainTabs}
