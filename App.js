@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, Text, View, Button } from "react-native";
+import { SafeAreaView, Text, View, Button, Image } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 //Navigation (new)
 import { NavigationContainer } from "@react-navigation/native";
@@ -43,7 +43,11 @@ const MainTabs = () => (
     <Tab.Screen
       name="Login"
       component={LoginScreen}
-      options={{ headerShown: false }}
+      options={{ 
+        title: "Login",
+        headerShown: false, 
+      }
+    }
     />
     <Tab.Screen
       name="Welcome"
@@ -68,24 +72,41 @@ const MainTabs = () => (
   </Tab.Navigator>
 );
 
+function LogoTitle() {
+  return <Image source={require('./assets/images/chef.png')} style={
+    {
+      height: 40,
+      width: 30,
+      resizeMode: "contain",
+      alignSelf: "center"
+    }
+  } />
+};
+
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = React.useState(false);
 
   return (
     <NavigationContainer>
-      <SafeAreaView style={stylesMenu.container}>
-        <LittleLemonHeader />
-        <Stack.Navigator
-          initialRouteName="MainTabs"
-          screenOptions={{ headerStyle: { backgroundColor: "red" } }}
-        >
-          <Stack.Screen
-            name="MainTabs"
-            component={MainTabs}
-            options={{ headerShown: false }}
-          />
-        </Stack.Navigator>
-      </SafeAreaView>
+      {/* <SafeAreaView style={stylesMenu.container}></SafeAreaView> */}
+      {/* <LittleLemonHeader /> */}
+      <Stack.Navigator
+        initialRouteName="MainTabs"
+        screenOptions={{
+          headerStyle: { backgroundColor: "#FBDABB" },
+          headerTintColor: "#000",
+          headerTitleStyle: {
+            fontWeight: "bold",
+          },
+        }}
+      >
+        <Stack.Screen
+          name="MainTabs"
+          component={MainTabs}
+          options={{ headerShown: true,
+            headerTitle: (props) => <LogoTitle {...props} />, }}
+        />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }

@@ -32,7 +32,7 @@ const Item = ({ name, price, image, description }) => (
   </View>
 );
 
-const FlatListMenu = () => {
+const FlatListMenu = ( {navigation} ) => {
   const renderItem = ({ item }) => (
     <Item
       name={item.name}
@@ -44,6 +44,9 @@ const FlatListMenu = () => {
 
   return (
     <View style={stylesMenu.containerList}>
+      {/* <Pressable onPress={() => navigation.goBack()}>
+        <Text>Go Back</Text>
+      </Pressable> */}
       <FlatList
         data={menuItemsToDisplay1}
         keyExtractor={(item) => item.id}

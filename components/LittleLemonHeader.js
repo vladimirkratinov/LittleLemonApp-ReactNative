@@ -1,7 +1,7 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Pressable } from "react-native";
 import React from "react";
 
-export default function LittleLemonHeader() {
+export default function LittleLemonHeader( {navigation} ) {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>🍋 Little Lemon</Text>
@@ -12,12 +12,19 @@ export default function LittleLemonHeader() {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#86d3ea",
-    justifyContent: "center", // Center content vertically
-    alignItems: "flex-start", // Center content horizontally
+    flexDirection: "row",
+    justifyContent: "flex-end", // Center content vertically
+    alignItems: "center", // Center content horizontally
     height: 50, // You can adjust the height as needed
   },
-  text: {
+  backButton: {
     marginLeft: 10,
+    // fontSize: 20,
+    // color: "black",
+    // fontWeight: "bold"
+  },
+  text: {
+    marginRight: 10,
     fontSize: 20,
     color: "black",
     fontWeight: "bold"
