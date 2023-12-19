@@ -23,6 +23,7 @@ const WelcomeScreen = ( {navigation }) => {
           source={require("../assets/images/restaurant2.jpg")}
           style={stylesWelcome.image}
         />
+        
         {/* About Us */}
         <Text style={stylesWelcome.sectionTitle}>About Us</Text>
         <Text style={stylesWelcome.description}>

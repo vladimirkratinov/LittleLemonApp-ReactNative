@@ -5,6 +5,7 @@ const stylesWelcome = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "white"
   },
   title: {
     fontSize: 24,
@@ -31,9 +32,10 @@ const stylesWelcome = StyleSheet.create({
     marginVertical: 10,
   },
   button: {
-    backgroundColor: "#4CAF50",
+    backgroundColor: "#E05263",
+    width: "100%",
     padding: 10,
-    borderRadius: 10,
+    borderRadius: 0,
     alignItems: "center",
     margin: 10,
     shadowColor: "#000",

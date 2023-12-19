@@ -4,6 +4,8 @@ import {
   StyleSheet,
   TextInput,
   Pressable,
+  Image,
+  View,
 } from "react-native";
 import React from "react";
 
@@ -14,15 +16,35 @@ export default function LoginScreen() {
   const handlePress = () => {
     //Handle Press action here:
     // console.log("Button pressed!");
-    onLogin(!loggedIn);
+    if ((loggedIn) && (email.trim() === "" && password.trim() === "")) {
+      alert("Enter your email and password");
+    } else {
+      onLogin(!loggedIn);
+    }
   };
 
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.headerText}>Welcome!</Text>
+      {/* <Text style={styles.headerText}>Welcome!</Text> */}
+      <View
+        style={{
+          flex: 1,
+          alignItems: "center",
+          margin: 40,
+        }}
+      >
+        <Image
+          source={require("../assets/images/chef.png")}
+          style={{
+            height: 120,
+            width: 120,
+            resizeMode: "contain",
+          }}
+        />
+      </View>
       {loggedIn && (
         <>
-          <Text style={styles.regularText}>Login to continue </Text>
+          <Text style={styles.regularText}>Login to continue</Text>
           <TextInput
             style={styles.input}
             value={email}
@@ -40,6 +62,13 @@ export default function LoginScreen() {
           />
         </>
       )}
+      {!loggedIn && (
+        <>
+          <Text style={styles.regularText}>
+            You are successfully logged in!
+          </Text>
+        </>
+      )}
       <Pressable style={styles.button} onPress={handlePress}>
         <Text style={styles.buttonText}>{loggedIn ? "Log In" : "Log Out"}</Text>
       </Pressable>
@@ -50,7 +79,7 @@ export default function LoginScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white",
+    // backgroundColor: "white",
   },
   headerText: {
     marginTop: 60,
@@ -74,10 +103,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     borderRadius: 8,
     borderColor: "black",
-    backgroundColor: "#F4CE14",
+    // backgroundColor: "#A9D8B8",
+    backgroundColor: "#A9D8B8",
   },
   button: {
-    backgroundColor: "#3498db",
+    backgroundColor: "#E05263",
     paddingVertical: 12,
     paddingHorizontal: 24,
     margin: 12,

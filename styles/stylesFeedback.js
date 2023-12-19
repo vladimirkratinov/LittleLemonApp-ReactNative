@@ -16,7 +16,7 @@ const stylesFeedback = StyleSheet.create({
     fontSize: 16,
     borderRadius: 8,
     borderColor: "black",
-    backgroundColor: "#F4CE14",
+    backgroundColor: "#A9D8B8",
   },
   messageInput: {
     height: 100,
@@ -24,7 +24,7 @@ const stylesFeedback = StyleSheet.create({
     borderRadius: 8,
     padding: 10,
     fontSize: 16,
-    backgroundColor: "#F4CE14",
+    backgroundColor: "#BEFFC7",
     textAlignVertical: "top",
   },
   headingSection: {

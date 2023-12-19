@@ -61,8 +61,8 @@ export default function FeedbackForm() {
         value={firstName}
         placeholder="First Name"
         onChangeText={onChangeFirstName}
-        onFocus={() => Alert.alert("First Name is focused")}
-        onBlur={() => Alert.alert("First name is now blurred")}
+        // onFocus={() => Alert.alert("First Name is focused")}
+        // onBlur={() => Alert.alert("First name is now blurred")}
         clearButtonMode="always"
       />
       <TextInput
