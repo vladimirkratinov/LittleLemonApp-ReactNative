@@ -7,7 +7,7 @@ const stylesFeedback = StyleSheet.create({
   },
   inner: {
     flex: 1,
-    justifyContent: "flex-end"
+    // justifyContent: "flex-start"
   },
   input: {
     height: 40,

@@ -6,7 +6,7 @@ import {
   TextInput,
   KeyboardAvoidingView,
   Platform,
-  Alert
+  Alert,
 } from "react-native";
 import React, { useState } from "react";
 import stylesFeedback from "../styles/stylesFeedback";
@@ -25,70 +25,70 @@ export default function FeedbackForm() {
     //   style={{ flex: 1 }}
     //   keyboardVerticalOffset={headerHeight + 105}
     //   behavior={Platform.OS === "ios" ? "padding" : "height"}
-    // >
+    // ></KeyboardAvoidingView>
 
-    <KeyboardAwareScrollView
-      contentContainerStyle={{ flex: 1 }}
-      resetScrollToCoords={{ x: 0, y: 0 }}
-      scrollEnabled={true}
-      extraScrollHeight={Platform.OS === "ios" ? headerHeight + 55 : 0}
-      extraHeight={Platform.select({ android: 100 })}
-      style={{ flexGrow: 1 }}
+    // <KeyboardAwareScrollView
+    //   contentContainerStyle={{ flex: 1 }}
+    //   resetScrollToCoords={{ x: 0, y: 0 }}
+    //   scrollEnabled={true}
+    //   // extraScrollHeight={Platform.OS === "ios" ? headerHeight + 0 : 0}
+    //   // extraHeight={Platform.select({ android: 0 })}
+    //   style={{ flexGrow: 1 }}
+    // ></KeyboardAwareScrollView>
+
+    <ScrollView
+      // keyboardDismissMode="on-drag"
+      // keyboardShouldPersistTaps="handled"
+      style={stylesFeedback.container}
     >
-      <ScrollView
-        keyboardDismissMode="on-drag"
-        keyboardShouldPersistTaps="handled"
-        style={stylesFeedback.container}
-      >
-        <Text style={stylesFeedback.headingSection}>
+      {/* <Text style={stylesFeedback.headingSection}>
           How was your visit to Little Lemon?
-        </Text>
-        <View style={stylesFeedback.imageContainer}>
+        </Text> */}
+      {/* <View style={stylesFeedback.imageContainer}>
           <Image
             source={require("../assets/feedback.png")}
             style={stylesFeedback.image}
           />
-        </View>
-        <Text style={stylesFeedback.infoSection}>
-          Little Lemon is a charming neighborhood bistro that serves simple food
-          and classic cocktails in a lively but casual environment. We would
-          love to hear your experience with us!
-        </Text>
+        </View> */}
+      <Text style={stylesFeedback.infoSection}>
+        Little Lemon is a charming neighborhood bistro that serves simple food
+        and classic cocktails in a lively but casual environment. We would love
+        to hear your experience with us!
+      </Text>
 
-        <TextInput
-          style={stylesFeedback.input}
-          value={firstName}
-          placeholder="First Name"
-          onChangeText={onChangeFirstName}
-          onFocus={() => Alert.alert("First Name is focused")}
-          onBlur={() => Alert.alert('First name is now blurred')}
-          clearButtonMode="always"
-        />
-        <TextInput
-          style={stylesFeedback.input}
-          value={lastName}
-          placeholder="Last Name"
-          onChangeText={onChangeLastName}
-          clearButtonMode="always"
-        />
-        <TextInput
-          style={stylesFeedback.input}
-          value={email}
-          placeholder="Email"
-          keyboardType="email-address"
-          onChangeText={onChangeEmail}
-          clearButtonMode="always"
-        />
-        <TextInput
-          style={stylesFeedback.messageInput}
-          value={message}
-          placeholder="Type here your feedback..."
-          onChangeText={onChangeMessage}
-          multiline={true}
-          numberOfLines={4} // Adjust the number of lines as needed
-          maxLength={250}
-        />
-      </ScrollView>
-    </KeyboardAwareScrollView>
+      <TextInput
+        style={stylesFeedback.input}
+        value={firstName}
+        placeholder="First Name"
+        onChangeText={onChangeFirstName}
+        onFocus={() => Alert.alert("First Name is focused")}
+        onBlur={() => Alert.alert("First name is now blurred")}
+        clearButtonMode="always"
+      />
+      <TextInput
+        style={stylesFeedback.input}
+        value={lastName}
+        placeholder="Last Name"
+        onChangeText={onChangeLastName}
+        clearButtonMode="always"
+      />
+      <TextInput
+        style={stylesFeedback.input}
+        value={email}
+        placeholder="Email"
+        keyboardType="email-address"
+        onChangeText={onChangeEmail}
+        clearButtonMode="always"
+      />
+      <TextInput
+        style={stylesFeedback.messageInput}
+        value={message}
+        placeholder="Type here your feedback..."
+        onChangeText={onChangeMessage}
+        multiline={true}
+        numberOfLines={4} // Adjust the number of lines as needed
+        maxLength={250}
+      />
+    </ScrollView>
   );
 }
