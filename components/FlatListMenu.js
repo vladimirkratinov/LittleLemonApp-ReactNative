@@ -1,4 +1,4 @@
-import { View, Text, FlatList, Image } from "react-native";
+import { View, Text, FlatList, Image, Pressable } from "react-native";
 import menuItemsToDisplay1 from "../data1";
 import stylesMenu from "../styles/stylesMenu";
 

@@ -1,8 +1,8 @@
-import { View, Text, Image, ScrollView } from "react-native";
+import { View, Text, Image, ScrollView, Pressable } from "react-native";
 import React from "react";
 import stylesWelcome from "../styles/stylesWelcome";
 
-const WelcomeScreen = () => {
+const WelcomeScreen = ( {navigation }) => {
   return (
     <ScrollView>
       <View style={stylesWelcome.container}>
@@ -12,6 +12,9 @@ const WelcomeScreen = () => {
           Enjoy our delightful menu with fresh and tasty dishes. We provide a
           cozy and friendly atmosphere for a perfect dining experience.
         </Text>
+        <Pressable style={stylesWelcome.button} onPress={() => navigation.navigate('FlatList')}>
+          <Text style={stylesWelcome.buttonText}>View Menu</Text>
+        </Pressable>
         <Image
           source={require("../assets/images/restaurant1.jpg")}
           style={stylesWelcome.image}

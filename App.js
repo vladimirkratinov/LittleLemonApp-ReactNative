@@ -68,13 +68,13 @@ const MainTabs = () => (
   </Tab.Navigator>
 );
 
-const App = () => {
+export default function App() {
   const [isLoggedIn, setIsLoggedIn] = React.useState(false);
 
   return (
-    <SafeAreaView style={stylesMenu.container}>
-      <LittleLemonHeader />
-      <NavigationContainer>
+    <NavigationContainer>
+      <SafeAreaView style={stylesMenu.container}>
+        <LittleLemonHeader />
         <Stack.Navigator
           initialRouteName="MainTabs"
           screenOptions={{ headerStyle: { backgroundColor: "red" } }}
@@ -85,9 +85,7 @@ const App = () => {
             options={{ headerShown: false }}
           />
         </Stack.Navigator>
-      </NavigationContainer>
-    </SafeAreaView>
+      </SafeAreaView>
+    </NavigationContainer>
   );
-};
-
-export default App;
+}
